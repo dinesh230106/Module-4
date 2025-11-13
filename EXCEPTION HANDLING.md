@@ -23,12 +23,44 @@ To create a Python program that prompts the user for a list of grades separated 
 ### PROGRAM
 
 ```
-Reg.No
-Name
-Add Your Code Here
+# Reg.No: 212223060057
+# Name: DINESH KUMAR A
+# Program to demonstrate exception handling for grade input
+
+try:
+    # Read input from the user
+    input_str = input("Enter grades separated by commas: ")
+
+    # Split the string into individual grades
+    grades = input_str.split(",")
+
+    # Convert each grade to integer
+    l1 = [int(grade) for grade in grades]
+
+    # Print the converted list
+    print("List of integer grades:", l1)
+
+except ValueError:
+    # Handle invalid inputs
+    print("The grades you entered were in an invalid format.")
+    print("Original input:", grades)
+
 
 ```
 
 ### OUTPUT
+```
+Enter grades separated by commas: 85,90,78,88
+List of integer grades: [85, 90, 78, 88]
+
+```
+or
+```
+Enter grades separated by commas: 85,abc,90
+The grades you entered were in an invalid format.
+Original input: ['85', 'abc', '90']
+
+```
 
 ### RESULT
+Thus, the Python program demonstrating exception handling for invalid grade inputs was successfully executed and verified.
