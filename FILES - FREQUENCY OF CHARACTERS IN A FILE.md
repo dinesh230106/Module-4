@@ -30,68 +30,24 @@ To write a Python program that reads a file and counts the frequency of each cha
 ### PROGRAM
 
 ```
-# Reg.No: 212223060057
-# Name: DINESH KUMAR A
-# Program to count the frequency of characters in a file
-
 from collections import defaultdict
-
 def create_file(file_path, content):
-    # Create and write content to the file
-    with open(file_path, 'w') as f:
-        f.write(content)
-
-def character_frequency(file_path):
-    # Read the file and count character frequencies
-    with open(file_path, 'r') as f:
-        content = f.read()
-
-    d1 = defaultdict(int)
-    for ch in content:
-        d1[ch] += 1
-
-    return d1
-
-# Main program
-file_path = "sample.txt"
-content = "Dinesh Kumar is learning Python programming."
-
-# Create a file with sample content
-create_file(file_path, content)
-
-# Get and print character frequencies
-freq = character_frequency(file_path)
-print("Character frequencies in the file:")
-for char, count in freq.items():
-    print(f"'{char}': {count}")
+    with open(file_path, 'w') as file:
+        file.write(content)
+def char_frequency(file_path):
+    char_count=defaultdict(int)
+    with open(file_path, 'r')as file:
+        content=file.read()
+        for char in content:
+           char_count[char]+=1
+    return char_count
 
 ```
 
 
 ### OUTPUT
-```
-Character frequencies in the file:
-'D': 1
-'i': 4
-'n': 4
-'e': 2
-'s': 2
-'h': 2
-' ': 5
-'K': 1
-'u': 2
-'m': 3
-'a': 3
-'r': 4
-'l': 1
-'g': 2
-'P': 1
-'y': 1
-'t': 1
-'o': 2
-'.': 1
+<img width="1114" height="344" alt="image" src="https://github.com/user-attachments/assets/e0e72d5a-ca27-43de-a7ee-b45f9886ff94" />
 
-```
 
 
 ### RESULT
