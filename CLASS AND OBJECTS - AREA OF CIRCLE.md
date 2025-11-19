@@ -33,28 +33,21 @@ To write a Python program to take the radius from the user and find the area of 
 # Program to find the area of a circle using class and object
 
 import math
-
-class umbrella:
-    def rain(self, r):
-        area = math.pi * r ** 2
-        print(f"The area of the circle with radius {r} is: {area:.2f}")
-
-# Taking user input for radius
-r = float(input("Enter the radius of the circle: "))
-
-# Creating an object of class umbrella
-u = umbrella()
-u.rain(r)
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    def calculate_area(self):
+        return math.pi * (self.radius ** 2)
+radius = float(input())
+circle = Circle(radius)
+print(f"Area of circle: {circle.calculate_area():.2f}")
 
 ```
 
 ### OUTPUT
 
-```
-Enter the radius of the circle: 5
-The area of the circle with radius 5.0 is: 78.54
+<img width="709" height="224" alt="image" src="https://github.com/user-attachments/assets/09976e69-0b31-4c04-a0b7-5395b70daec0" />
 
-```
 
 ### RESULT
 Thus, the Python program to calculate the area of a circle using a class and function was successfully written, executed, and verified.
