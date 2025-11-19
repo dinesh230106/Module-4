@@ -39,88 +39,39 @@ To write a Python program to perform addition and division operations using a cl
 # Name: DINESH KUMAR A
 # Program to perform arithmetic operations using a class
 
-class Saveetha:
-    def __init__(self):
-        self.a = 0
-        self.b = 0
-
-    def setvalues(self, a, b):
-        self.a = a
-        self.b = b
-
-    def add(self):
-        return self.a + self.b
-
+class cse:
+    def __init__(self, a, b):
+        self.a=a
+        self.b=b
+    def mod(self):
+        return self.a%self.b
     def div(self):
-        try:
-            return self.a / self.b
-        except ZeroDivisionError:
-            return "Error: Division by zero is not allowed."
+        return self.a//self.b
 
-# Main function
-def main():
-    s = Saveetha()
+a=int(input())
+b=int(input())
+obj=cse(a, b)
+obj.mod()
+obj.div()
+choice=1
+while choice!=0:
+    choice=int(input())
+    if choice==1:
+        print("Result: ", obj.mod())
+    elif choice==2:
+        print("Result: ", obj.div())
+    else:
+        print("Exiting!")
 
-    a = float(input("Enter first number: "))
-    b = float(input("Enter second number: "))
-
-    s.setvalues(a, b)
-
-    while True:
-        print("\n1. Addition")
-        print("2. Division")
-        print("0. Exit")
-        choice = int(input("Enter your choice: "))
-
-        if choice == 1:
-            print("Result of addition:", s.add())
-        elif choice == 2:
-            print("Result of division:", s.div())
-        elif choice == 0:
-            print("Exiting!")
-            break
-        else:
-            print("Invalid choice")
-
-# Run the program
-main()
+print()
 
 
 
 ```
 
 ### OUTPUT
-```
-Enter first number: 10
-Enter second number: 5
+<img width="606" height="383" alt="image" src="https://github.com/user-attachments/assets/79830648-0873-4317-a5cb-3690d92a9320" />
 
-1. Addition
-2. Division
-0. Exit
-Enter your choice: 1
-Result of addition: 15.0
-
-1. Addition
-2. Division
-0. Exit
-Enter your choice: 2
-Result of division: 2.0
-
-1. Addition
-2. Division
-0. Exit
-Enter your choice: 0
-Exiting!
-
-```
-or
-```
-Enter first number: 10
-Enter second number: 0
-Enter your choice: 2
-Result of division: Error: Division by zero is not allowed.
-
-```
 
 ### RESULT
 Thus, the Python program to perform arithmetic operations (addition and division) using a class and object was successfully written, executed, and verified.
