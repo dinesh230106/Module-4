@@ -26,28 +26,22 @@ To write a Python program to print the size of a dictionary using `getsizeof()` 
 # Name: DINESH KUMAR A
 # Program to find the size of dictionaries using sys.getsizeof()
 
-import sys
-
-# Defining dictionaries
-dic1 = {"a": 1, "b": 2, "c": 3}
-dic2 = {"name": "Dinesh", "age": 21, "place": "Chennai"}
-dic3 = {1: "apple", 2: "banana", 3: "mango", 4: "orange"}
-
-# Printing size of each dictionary
-print("Size of dic1:", sys.getsizeof(dic1), "bytes")
-print("Size of dic2:", sys.getsizeof(dic2), "bytes")
-print("Size of dic3:", sys.getsizeof(dic3), "bytes")
-
+from sys import getsizeof
+dic1 = {"A": 1, "B": 2, "C": 3}
+dic2 = {"Geek1": "Raju", "Geek2": "Nikhil", "Geek3": "Deepanshu"}
+dic3 = {1: "Lion", 2: "Tiger", 3: "Fox", 4: "Wolf"}
+result1 = getsizeof(dic1)
+result2 = getsizeof(dic2)
+result3 = getsizeof(dic3)
+print("Size of dic1: ", result1, "bytes", sep='')
+print("Size of dic2: ", result2, "bytes", sep='')
+print("Size of dic3: ", result3, "bytes", sep='')
 
 ```
 
 ### OUTPUT
-```
-Size of dic1: 232 bytes
-Size of dic2: 248 bytes
-Size of dic3: 264 bytes
+<img width="679" height="213" alt="image" src="https://github.com/user-attachments/assets/a2fcb18c-6a2f-4f93-9355-84ec8e48df46" />
 
-```
 
 
 ### RESULT
